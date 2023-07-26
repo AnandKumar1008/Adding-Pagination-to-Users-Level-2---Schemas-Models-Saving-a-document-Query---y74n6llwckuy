@@ -21,9 +21,9 @@ app.get("/", async function (req, res) {
   const limit = parseInt(req.query.limit) || 5;
   const offset = parseInt(req.query.offset) || 0;
 
-  if (limit > 5) {
-    return res.status(400).send("Maximum limit value is 5.");
-  }
+  //   if (limit > 5) {
+  //     return res.status(400).send("Maximum limit value is 5.");
+  //   }
 
   const usersInRange = await users
     .find({}, { _id: 1 })
